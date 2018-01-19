@@ -40,5 +40,3 @@ const tj = new TJBot(hardware, configuration, credentials);
 tj.listen((texto)=> {
   console.log(texto)
 })
-
-}
