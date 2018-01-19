@@ -17,26 +17,29 @@ const configuration = {
     speak: {
         language: 'pt-BR'
     },
-    wave: {
-        servoPin: 7 // corresponds to BCM 7 / physical PIN 26
-    },
-    see: {
-        confidenceThreshold: {
-            object: 0.5,   // only list image tags with confidence > 0.5
-            text: 0.1     // only list text tags with confidence > 0.5
-        },
-        camera: {
-            height: 720,
-            width: 960,
-            verticalFlip: false, // flips the image vertically, may need to set to 'true' if the camera is installed upside-down
-            horizontalFlip: false // flips the image horizontally, should not need to be overridden
-        }
-    }
+
+    log: {
+          level: 'verbose'
+      }
 };
 
 //aqui começa para valer
 const tj = new TJBot(hardware, configuration, credentials);
 
-tj.listen((texto)=> {
-  console.log(texto)
-})
+console.log("You can ask me to introduce myself or tell you a joke.");
+console.log("Try saying, \"" + tj.configuration.robot.name + ", please introduce yourself\" or \"" + tj.configuration.robot.name + ", who are you?\"");
+console.log("You can also say, \"" + tj.configuration.robot.name + ", tell me a joke!\"");
+
+tj.listen(function(msg) {
+    // check to see if they are talking to TJBot
+    if (msg.startsWith(tj.configuration.robot.name)) {
+        // remove our name from the message
+        var turn = msg.toLowerCase().replace(tj.configuration.robot.name.toLowerCase(), "");
+
+        // send to the conversation service
+        tj.converse(WORKSPACEID, turn, function(response) {
+            // speak the result
+            tj.speak(response.description);
+        });
+    }
+});

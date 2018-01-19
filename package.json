@@ -28,6 +28,6 @@
   },
   "homepage": "https://github.com/xumes/tj-bot#readme",
   "dependencies": {
-    "tjbot": "^1.3.0"
+    "tjbot": "latest"
   }
 }
