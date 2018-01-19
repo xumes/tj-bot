@@ -1,0 +1,29 @@
+{
+  "name": "tj-bot",
+  "version": "1.0.0",
+  "description": "Meu projeto TJ-Bot que fala, ouve, vê, conta piadas, faz pesquisa na internet e sabe sobre o clima\"",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xumes/tj-bot.git"
+  },
+  "keywords": [
+    "tj-bot",
+    "raspberry",
+    "pi",
+    "inteligencia",
+    "artificial",
+    "watson",
+    "ibm",
+    "node.js"
+  ],
+  "author": "Reginaldo Santos",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/xumes/tj-bot/issues"
+  },
+  "homepage": "https://github.com/xumes/tj-bot#readme"
+}
