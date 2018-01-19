@@ -25,5 +25,8 @@
   "bugs": {
     "url": "https://github.com/xumes/tj-bot/issues"
   },
-  "homepage": "https://github.com/xumes/tj-bot#readme"
+  "homepage": "https://github.com/xumes/tj-bot#readme",
+  "dependencies": {
+    "tjbot": "^1.3.0"
+  }
 }
