@@ -4,6 +4,7 @@
   "description": "Meu projeto TJ-Bot que fala, ouve, vê, conta piadas, faz pesquisa na internet e sabe sobre o clima\"",
   "main": "index.js",
   "scripts": {
+    "start": "sudo node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

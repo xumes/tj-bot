@@ -4,7 +4,7 @@ const config = require('./config');
 //configurações gerais
 const credentials = config.credentials;
 const WORKSPACEID = config.conversationWorkspaceId;
-const hardware = ['led', 'servo', 'microphone', 'speaker','camera'];
+const hardware = ['led', 'servo', 'microphone','camera'];
 const configuration = {
     robot: {
         gender: 'female',
