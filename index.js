@@ -1,4 +1,4 @@
-const tjbot = require("tjbot");
+const TJBot = require("tjbot");
 const config = require('./config');
 
 //configurações gerais
